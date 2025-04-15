@@ -361,7 +361,7 @@ function getEssenceGain() {
     const lifeIsValueable = gameData.requirements["Life is valueable"].isCompleted() ? gameData.dark_matter : 1
 
     return essenceControl.getEffect() * essenceCollector.getEffect() * transcendentMaster.getEffect()
-        * faintHope.getEffect() * rise.getEffect() * getChallengeBonus("dance_with_the_devil")
+        * faintHope.getEffect() * rise.getEffect() * getChallengeBonus("dance_with_the_devil") * getChallengeBonus("the_brightest_time")
         * getAGiftFromGodEssenceGain() * darkMagician.getEffect() * getDarkMatterSkillEssence() 
         * theNewGold * lifeIsValueable *  essenceMultGain()
 }

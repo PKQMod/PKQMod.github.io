@@ -467,6 +467,8 @@ function renderChallenges() {
     document.getElementById("challengeGoal4").textContent = format(getChallengeGoal("dance_with_the_devil"))
     document.getElementById("challengeGoal5").textContent = getFormattedChallengeTaskGoal("Chairman", Math.floor(getChallengeGoal("legends_never_die")))
     document.getElementById("challengeGoal6").textContent = getFormattedChallengeTaskGoal("Sigma Proioxis", Math.floor(100*(getChallengeGoal("the_darkest_time")-1)))
+	document.getElementById("challengeGoal7").textContent = getFormattedChallengeTaskGoal("One Above All", Math.floor(100*(getChallengeGoal("the_brightest_time")-1)))
+
 
     document.getElementById("challengeReward1").hidden = gameData.challenges.an_unhappy_life == 0
     document.getElementById("challengeReward2").hidden = gameData.challenges.rich_and_the_poor == 0
@@ -474,6 +476,7 @@ function renderChallenges() {
     document.getElementById("challengeReward4").hidden = gameData.challenges.dance_with_the_devil == 0
     document.getElementById("challengeReward5").hidden = gameData.challenges.legends_never_die == 0
     document.getElementById("challengeReward6").hidden = gameData.challenges.the_darkest_time == 0
+	document.getElementById("challengeReward7").hidden = gameData.challenges.the_brightest_time == 0
 
     renderCurrentChallengeRewardValue()
 
@@ -483,6 +486,7 @@ function renderChallenges() {
     document.getElementById("challengeEssenceGainBuff").textContent = format(getChallengeBonus("dance_with_the_devil"), 2)
     document.getElementById("challengeEvilGainBuff").textContent = format(getChallengeBonus("legends_never_die"), 2)
     document.getElementById("challengeDarkMatterGainBuff").textContent = format(getChallengeBonus("the_darkest_time"), 2)
+	document.getElementById("challengeEsscenceBuff").textContent = format(getChallengeBonus("the_brightest_time"), 2)
 
     document.getElementById("challenge5MetaverseLifespanDebuff").hidden = gameData.rebirthFiveCount == 0
 }
@@ -804,6 +808,7 @@ function renderSettings() {
     document.getElementById("challengeStat4").hidden = gameData.challenges.dance_with_the_devil == 0
     document.getElementById("challengeStat5").hidden = gameData.challenges.legends_never_die == 0
     document.getElementById("challengeStat6").hidden = gameData.challenges.the_darkest_time == 0
+	document.getElementById("challengeStat7").hidden = gameData.challenges.the_brightest_time == 0
 
     document.getElementById("challengeHappinessBuffDisplay").textContent = format(getChallengeBonus("an_unhappy_life"), 2)
     document.getElementById("challengeIncomeBuffDisplay").textContent = format(getChallengeBonus("rich_and_the_poor"), 2)
@@ -811,6 +816,7 @@ function renderSettings() {
     document.getElementById("challengeEssenceGainBuffDisplay").textContent = format(getChallengeBonus("dance_with_the_devil"), 2)
     document.getElementById("challengeEvilGainBuffDisplay").textContent = format(getChallengeBonus("legends_never_die"), 2)
     document.getElementById("challengeDarkMaterGainBuffDisplay").textContent = format(getChallengeBonus("the_darkest_time"), 2)
+	document.getElementById("challengeEssenceBuffDisplay").textContent = format(getChallengeBonus("the_brightest_time"), 2)
 }
 
 function renderRequirements() {
@@ -1489,6 +1495,7 @@ window.addEventListener('keydown', function (e) {
             case "4": toggleChallenge("dance_with_the_devil"); break
             case "5": toggleChallenge("legends_never_die"); break
             case "6": toggleChallenge("the_darkest_time"); break
+			case "7": toggleChallenge("the_brightest_time"); break
         }
     }
 });

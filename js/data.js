@@ -91,6 +91,7 @@
         dance_with_the_devil: 0,
         legends_never_die: 0,
         the_darkest_time: 0,
+		the_brightest_time: 0,
     },
     dark_matter_shop: {
         // Upgradables.
@@ -540,6 +541,7 @@ const requirementsBaseData = {
     "Challenge_dance_with_the_devil": new EssenceRequirement(["#danceWithTheDevilChallenge"], [{ requirement: 1e6 }]),
     "Challenge_legends_never_die": new EssenceRequirement(["#legendsNeverDieChallenge"], [{ requirement: 2.5e7 }]),
     "Challenge_the_darkest_time": new EssenceRequirement(["#theDarkestTimeChallenge"], [{ requirement: 1e47 }]),
+	"Challenge_the_brightest_time": new EssenceRequirement(["#theBrightestTimeChallenge"], [{ requirement: 1e300}]),
 
     // Metaverse Altars
     "Metaverse": new MetaverseRequirement(["#metaverseTabButton"], [{ requirement: 1 }]),

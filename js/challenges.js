@@ -42,6 +42,9 @@ function setChallengeProgress() {
     if (gameData.active_challenge == "the_darkest_time") {
         gameData.challenges.the_darkest_time = Math.max(gameData.challenges.the_darkest_time, getChallengeTaskGoalProgress("Sigma Proioxis") / 100)
     }
+	if (gameData.active_challenge == "the_brightest_time") {
+        gameData.challenges.the_brightest_time = Math.max(gameData.challenges.the_brightest_time, getChallengeTaskGoalProgress("One Above All") / 100)
+    }
 }
 
 function getChallengeBonus(challenge_name, current = false) {
@@ -62,6 +65,9 @@ function getChallengeBonus(challenge_name, current = false) {
     }
     if (challenge_name == "the_darkest_time" || challenge_name == 6) {
         return softcap(Math.pow((current ? getChallengeTaskGoalProgress("Sigma Proioxis") / 100.0 : gameData.challenges.the_darkest_time) + 1, 0.85), 25, 0.6)
+	}
+    if (challenge_name == "the_brightest_time" || challenge_name == 7) {
+        return softcap(Math.pow((current ? getChallengeTaskGoalProgress("One Above All") / 100.0 : gameData.challenges.the_brightest_time) + 1, 0.85), 25, 0.6)
     }
 }
 
@@ -83,5 +89,8 @@ function getChallengeGoal(challenge_name) {
     }
     if (challenge_name == "the_darkest_time" || challenge_name == 6) {
         return gameData.challenges.the_darkest_time + 1
+    }
+	if (challenge_name == "the_brightest_time" || challenge_name == 6) {
+        return gameData.challenges.the_brightest_time + 1
     }
 }
